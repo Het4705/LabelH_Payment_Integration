@@ -31,6 +31,9 @@ app.post("/order", async (req, res) => {
     res.status(500).send("Error");
   }
 });
+app.get("/",async(req,res)=>{
+  return res.status(200).html("Thanks for visiting !!")
+})
 
 app.post("/order/validate", async (req, res) => {
   const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
