@@ -32,7 +32,7 @@ app.post("/order", async (req, res) => {
   }
 });
 app.get("/",async(req,res)=>{
-  return res.status(200).html("Thanks for visiting !!")
+  res.status(200).send("Thanks for visiting !!");
 })
 
 app.post("/order/validate", async (req, res) => {
